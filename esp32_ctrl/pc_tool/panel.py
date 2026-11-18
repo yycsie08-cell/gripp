@@ -1,4 +1,4 @@
-"""Gripp 燒錄控制面板
+"""Gripp Pad 燒錄控制面板
 
 選板子、選序列埠,按一下就編譯 / 燒錄 / 看序列埠訊息。
 板子清單直接讀上一層的 platformio.ini,所以在那邊加新板子,這裡就會多一個選項。
@@ -64,7 +64,7 @@ def default_board():
 class Panel(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("Gripp 燒錄控制面板")
+        self.title("Gripp Pad 燒錄控制面板")
         self.configure(bg=BG)
         self.geometry("860x600")
         self.minsize(720, 480)
@@ -89,7 +89,7 @@ class Panel(tk.Tk):
 
         top = tk.Frame(self, bg=BG)
         top.pack(fill="x", padx=16, pady=(14, 6))
-        tk.Label(top, text="Gripp", bg=BG, fg=GOLD, font=("Segoe UI", 18, "bold")).pack(side="left")
+        tk.Label(top, text="Gripp Pad", bg=BG, fg=GOLD, font=("Segoe UI", 18, "bold")).pack(side="left")
         tk.Label(top, text="  ESP32 燒錄控制面板", bg=BG, fg=DIM, font=("Microsoft JhengHei UI", 11)).pack(side="left", pady=(6, 0))
 
         row = tk.Frame(self, bg=BG)

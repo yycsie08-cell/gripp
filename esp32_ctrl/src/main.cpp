@@ -204,9 +204,9 @@ static void startWeb() {
     web.on("/", HTTP_GET, []() {
         String h = F("<!doctype html><html><head><meta charset='utf-8'>"
                      "<meta name='viewport' content='width=device-width,initial-scale=1'>"
-                     "<meta http-equiv='refresh' content='3'><title>Gripp</title>"
+                     "<meta http-equiv='refresh' content='3'><title>Gripp Pad</title>"
                      "<style>body{font-family:sans-serif;background:#15161b;color:#eee;text-align:center;padding:24px}"
-                     "p{margin:8px}a{color:#ffc400}</style></head><body><h2>Gripp</h2>");
+                     "p{margin:8px}a{color:#ffc400}</style></head><body><h2>Gripp Pad</h2>");
         h += "<p>韌體 " FW_VERSION "</p>";
         h += "<p>IP:" + myIp().toString() + "</p>";
         {
@@ -273,7 +273,7 @@ void setup() {
     WiFi.begin(); // 用板子裡存好的 WiFi;沒存過就連不上,15 秒後 netTick() 會開熱點
     bootMs = millis();
 
-    Serial.printf("\n[Gripp] fw %s  名稱 %s\n", FW_VERSION, padName.c_str());
+    Serial.printf("\n[Gripp Pad] fw %s  名稱 %s\n", FW_VERSION, padName.c_str());
 }
 
 // 每一輪主迴圈看一下網路狀態:連上了就開 UDP 和網頁;15 秒還沒連上就開熱點(設定頁)。

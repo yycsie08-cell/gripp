@@ -1,4 +1,4 @@
-# Gripp
+# Gripp Pad
 
 把手機變成遊戲手把。
 
